@@ -8,20 +8,26 @@ public class CalculatorTest {
 
     @Before
     public void before(){
-        calculator = new Calculator(7,3);
+        calculator = new Calculator();
     }
+
     @Test
     public void canAdd(){
-        assertEquals(10,calculator.add());
+        assertEquals(12,calculator.add(10,2));
     }
 
     @Test
     public void canMultiply(){
-        assertEquals(21,calculator.multiply());
+        assertEquals(20,calculator.multiply(10,2));
     }
 
     @Test
     public void canSubtract(){
-        assertEquals(4,calculator.subtract());
+        assertEquals(8,calculator.subtract(10,2));
+    }
+
+    @Test
+    public void canDivide(){
+        assertEquals(5,calculator.divide(10,2), 0.0);
     }
 }
